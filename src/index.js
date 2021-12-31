@@ -9,6 +9,7 @@ import AppRouter from "./components/routes/AppRouter.js";
 
 import "./styles/styles.scss";
 
+const express = require("express");
 const app = express();
 const cors = require("cors");
 

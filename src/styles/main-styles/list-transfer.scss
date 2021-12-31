@@ -1,0 +1,669 @@
+:root {
+  --primary-color: #1976d2;
+}
+
+.section-transfer {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-content: space-around;
+  align-items: center;
+
+  .list-transfer {
+    width: 30vw;
+    height: 60vh;
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    // Transfer Block Style
+    .transfer-block {
+      width: 96%;
+      height: 15%;
+      margin: 2%;
+    }
+    .transfer {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      border: solid 1px var(--primary-color);
+      border-radius: 5px;
+      cursor: pointer;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 3);
+        align-items: center;
+
+        > p {
+          margin: 0%;
+          padding: 2%;
+          text-transform: uppercase;
+        }
+
+        .text-left {
+          align-self: flex-start;
+        }
+      }
+
+      .image-transfer-block {
+        position: relative;
+        width: calc(100% / 3);
+        //  display: flex;
+
+        .image-transfer {
+          position: relative;
+          width: 30%;
+          height: fit-content;
+        }
+      }
+    }
+    .transfer:hover {
+      background-color: rgba(128, 128, 128, 0.172);
+    }
+  }
+
+  .information-block {
+    position: relative;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .information-transfer {
+      position: relative;
+      width: 100%;
+      height: 40%;
+      border: solid 1px var(--primary-color);
+
+      > form {
+        width: 80%;
+        height: auto;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        // overflow-y: auto;
+
+        > * {
+          width: 100%;
+          margin: 0.5rem;
+        }
+      }
+    }
+
+    .create-transfer {
+      width: 10vw;
+      height: 5vh;
+      border: solid 1px;
+    }
+  }
+}
+
+///////////////////////// MODAL DETAILS TRANSFER ////////////////
+
+.Modal-description-transfer {
+  min-width: 500px;
+  max-width: 700px;
+  width: 40vw;
+  border-radius: 5px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .close-button {
+    font-size: larger;
+    color: gray;
+  }
+
+  .information-title {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .information-transfer {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--primary-color);
+    margin: 1rem;
+
+    > div {
+      width: calc(100%);
+      display: flex;
+      flex-direction: row;
+
+      border: solid 1px var(--primary-color);
+
+      > p {
+        min-width: calc(50% - 1rem);
+        height: 100%;
+        margin: 0%;
+        padding: 1rem;
+      }
+
+      .border-left {
+        border-left: solid 2px var(--primary-color);
+      }
+    }
+  }
+}
+
+///////////////////////// MODAL MAKE TRANSFER /////////////////////
+
+.Modal-make-transfer {
+  position: relative;
+  width: 98vw;
+  height: 90vh;
+  margin: 5vh auto;
+  background-color: aliceblue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  .close-button {
+    position: absolute;
+    margin: 0.5rem;
+    right: 0;
+    font-size: larger;
+    color: gray;
+    z-index: 10;
+  }
+
+  .image {
+    position: absolute;
+    min-width: 700px;
+    width: calc(100% - 6rem);
+    height: 60%;
+    bottom: 0%;
+    padding: 1rem;
+    margin: 3rem;
+  }
+
+  .details-block {
+    position: relative;
+    min-width: 700px;
+    max-height: 80vh;
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    .slider-details {
+      width: 100%;
+      height: 80%;
+
+      .slick-prev:before {
+        font-size: xx-large;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        color: rgb(65, 65, 65);
+      }
+
+      .slick-dots {
+        background-color: transparent !important;
+        top: 0px;
+        height: max-content;
+        text-align: right;
+        ul {
+          padding: 0 4rem;
+          margin: 0%;
+          background-color: transparent;
+
+          > li {
+            width: 30px;
+
+            button::before {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .slick-track {
+        height: 100% !important;
+      }
+
+      .slider-element {
+        position: relative;
+        width: 80%;
+        height: 100%;
+
+        display: flex;
+
+        .slide-block {
+          max-height: 600px;
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          margin: 0% 5%;
+          background-color: rgba(240, 248, 255, 0.289);
+          border-radius: 10px;
+
+          h1 {
+            margin-top: 10% 0% 0% auto;
+          }
+
+          .list-conts {
+            width: 70%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            padding: 0.1rem;
+            margin: 0 7.5vw;
+
+            overflow: auto;
+            scrollbar-width: thin;
+            border: none;
+
+            .cont-section {
+              position: relative;
+              min-width: 50%;
+              height: 5rem;
+              padding: 0%;
+              margin: 1rem auto;
+
+              .border-choose {
+                border: solid 3px green !important;
+              }
+
+              .cont-block {
+                max-width: 200px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                border: solid 1px;
+                margin: 0.5rem;
+                border-radius: 10px;
+
+                div {
+                  width: 40%;
+
+                  img {
+                    width: 80%;
+                    margin: 10% auto;
+                  }
+                }
+
+                .cont-information {
+                  width: 60%;
+                  padding: 2%;
+                  p {
+                    font-size: small;
+                    margin: 0%;
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+
+          .list-conts::-webkit-scrollbar {
+            height: 7px;
+          }
+          .list-conts::-webkit-scrollbar-thumb {
+            background: rgb(140, 140, 140);
+            border-radius: 15px;
+          }
+          .list-conts::-webkit-scrollbar-track {
+            // box-shadow: inset 0 0 5px grey;
+            padding: 2rem;
+          }
+
+          > div {
+            position: relative;
+            width: 80%;
+            margin: auto;
+          }
+        }
+
+        .innner-slide {
+          > div {
+            position: relative;
+            padding: 1rem;
+            display: flex;
+          }
+          .card-block {
+            position: relative;
+
+            width: 100%;
+            height: 20rem;
+            // margin-top: 5%;
+            padding: 7%;
+            margin: auto;
+
+            .card {
+              position: relative;
+              min-width: 350px;
+              width: 100%;
+              //  margin: 10% 0 auto;
+
+              .image-bank {
+                height: 100%;
+              }
+
+              div {
+                width: 100% !important;
+                margin-bottom: 0.5rem;
+
+                p {
+                  padding: 2%;
+                }
+              }
+              .information-front-card {
+                margin: 0%;
+                margin-left: 1rem;
+
+                .layer-cvv-card {
+                  padding: 0%;
+                  padding-right: 10%;
+                }
+              }
+            }
+          }
+
+          .slick-slide .slick-active .slick-current {
+            div {
+              width: 10rem;
+            }
+          }
+        }
+      }
+    }
+
+    /////////// form make transfer
+
+    .make-transfer {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      > * {
+        margin: 1rem 0.5rem;
+      }
+
+      ///// Send Button /////
+      .css-sghohy-MuiButtonBase-root-MuiButton-root {
+        width: 40% !important;
+        margin: 1rem auto;
+        background-color: var(--primary-color);
+      }
+
+      .person-block {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 1rem;
+        background-color: rgba(128, 128, 128, 0.075);
+        border-radius: 10px;
+
+        .input-information {
+          position: relative;
+          width: 80%;
+          height: fit-content;
+          margin: 1%;
+        }
+
+        .input-information-amount {
+          position: relative;
+          width: 80%;
+          height: fit-content;
+          margin: 1% 0%;
+
+          .input-information {
+            width: 40%;
+            margin: 1% 0%;
+          }
+          .css-1e7cuzv-MuiFormControl-root {
+            margin-top: 0%;
+            padding: 3px 0 5px;
+            width: 10%;
+          }
+
+          //// CURRENCY SELECTED
+          .css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
+            padding: 4px 0 5px !important;
+          }
+        }
+      }
+
+      .css-1d1r5q-MuiFormHelperText-root.Mui-error {
+        color: #d32f2f;
+        position: relative;
+        margin: 0;
+        height: 0;
+        padding-bottom: 10px;
+        display: block;
+      }
+
+      .css-1d1r5q-MuiFormHelperText-root {
+        display: none;
+      }
+    }
+  }
+}
+
+///////////////////////////////// MODAL DESCRIPTION TRANSFER ////////////////////////////////
+.Modal-pending-transfer {
+  min-width: 500px;
+  max-width: 700px;
+  width: 40vw;
+  border-radius: 5px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .close-button {
+    font-size: larger;
+    color: gray;
+  }
+
+  .information-title {
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .information-transfer {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    border: solid 1px var(--primary-color);
+    margin: 1rem;
+
+    > div {
+      width: calc(100%);
+      display: flex;
+      flex-direction: row;
+
+      border: solid 1px var(--primary-color);
+
+      > p {
+        min-width: calc(50% - 1rem);
+        height: 100%;
+        margin: 0%;
+        padding: 1rem;
+      }
+
+      .border-left {
+        border-left: solid 1px var(--primary-color);
+      }
+    }
+  }
+}
+
+/////////////////// Transfer bettween Conts
+.Modal-transfer-bettwen-conts {
+  min-width: 1000px;
+  width: 98vw;
+  height: 95vh;
+  border-radius: 10px;
+  background-color: aliceblue;
+  display: flex;
+
+  .close-button {
+    position: absolute;
+    font-size: larger;
+    color: gray;
+    right: 1%;
+    z-index: 1000;
+  }
+
+  .block-list-container {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h1 {
+      margin: 0%;
+      text-align: center;
+    }
+
+    > div {
+      width: 100%;
+      height: 35%;
+      display: flex;
+
+      .block-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .card {
+          max-width: 350px;
+          width: 100%;
+          margin: auto;
+          cursor: pointer;
+        }
+      }
+
+      .slider-components {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .slick-prev,
+        .slick-next {
+          position: relative;
+          top: 0px;
+          left: 0% !important;
+          z-index: 100;
+          margin: auto;
+          transform: rotate(90deg);
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+          color: #1976d2 !important;
+          font-size: 20px;
+        }
+
+        .slick-list {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .block-list-container-conts {
+      max-width: 350px;
+      width: 90%;
+
+      .list-conts {
+        width: 100% !important;
+        padding: 0% !important;
+
+        .block-cont-transfer {
+          padding: 0% !important;
+
+          .layer-cont-transfer {
+            padding: 0% !important;
+
+            .cont {
+              * {
+                font-size: 1.5vh;
+              }
+
+              .image-flag {
+                margin-top: 0%;
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .block-information-container {
+    width: 30%;
+    height: 100%;
+    border-left: solid 2px var(--primary-color);
+    border-right: solid 2px var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .information-container {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > * {
+        margin: 0.5rem;
+      }
+
+      .cantainer-amount {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .block-transcation-progres {
+    position: absolute;
+    min-width: 1000px;
+    width: 98vw;
+    height: 95vh;
+    z-index: 1000;
+    background-color: aliceblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    div {
+      text-align: center;
+      width: 50%;
+
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}

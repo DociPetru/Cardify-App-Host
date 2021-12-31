@@ -1,0 +1,280 @@
+.section-login-page {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+
+  .slider-details {
+    width: 100vw;
+    height: fit-content;
+    top: 0%;
+
+    .slick-list {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      > div {
+        width: 90%;
+        height: fit-content;
+      }
+
+      .slick-slide {
+        > div {
+          width: 100%;
+          height: fit-content;
+        }
+      }
+
+      .slick-initialized .slick-slide {
+        > div {
+          width: 98%;
+        }
+      }
+    }
+
+    .slider-image {
+      width: 98vw;
+      height: 98vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      h1 {
+        position: absolute;
+        font-size: 5vh;
+        width: 80%;
+        z-index: 1;
+        margin: 10% 10%;
+
+        border-radius: 10px;
+        text-align: right;
+        color: rgb(68, 67, 67);
+      }
+
+      .image {
+        position: relative;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .section-login {
+    position: absolute;
+    display: flex;
+    margin: 7rem;
+    right: 0%;
+    bottom: 0%;
+
+    justify-content: space-evenly;
+
+    > h1 {
+      position: relative;
+      top: 20vh;
+    }
+
+    > form {
+      min-width: 300px;
+      height: calc(30vh - 1rem);
+      width: calc(20vw - 1rem);
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+      position: relative;
+      // top: 40vh;
+
+      > .password-label {
+        -webkit-text-security: disc;
+      }
+
+      > * {
+        margin: 0.5rem;
+      }
+
+      > button {
+        height: 2rem;
+        width: 60%;
+        text-align: center;
+      }
+
+      > p {
+        > a {
+          cursor: pointer;
+        }
+      }
+
+      .warning {
+        color: red;
+      }
+    }
+  }
+}
+
+.image-slider {
+  width: 90% !important;
+}
+
+//////////////////////////////// CREATE ACCOUNT ///////////////////////////
+.Overlay {
+  z-index: 10;
+}
+.Modal-Create-Account {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+
+  display: flex;
+  background-color: aliceblue;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+
+  .button-close-modal {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    font-size: x-large;
+    color: gray;
+  }
+
+  .button-close-modal:hover {
+    background-color: rgba(235, 235, 235, 0.515);
+    color: rgb(70, 70, 70);
+  }
+
+  .image-create-account {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .image {
+      min-width: 600px;
+      width: 80%;
+      height: 70%;
+      margin: auto;
+    }
+  }
+
+  .information {
+    max-height: 600px;
+    width: 50%;
+
+    h1 {
+      font-size: 30px;
+      font-variant: small-caps;
+      color: rgba(75, 75, 75, 0.85);
+      margin: 1vw;
+    }
+    > form {
+      position: relative;
+      width: 90%;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        text-align: left;
+        font-size: 2vh;
+      }
+
+      .avatar-block {
+        display: flex;
+        overflow: auto;
+      }
+
+      .avatar-block::-webkit-scrollbar {
+        height: 0.5rem;
+      }
+      .avatar-block::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 4px rgba(148, 148, 148, 0.3);
+      }
+      .avatar-block::-webkit-scrollbar-thumb {
+        background-color: rgb(99, 98, 98);
+        outline: 1px solid rgb(214, 214, 214);
+        width: 0.1rem;
+        border-radius: 30px;
+      }
+
+      .check-valid {
+        border: solid #d32f2f 2px;
+      }
+
+      .inputs-section {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .css-1d1r5q-MuiFormHelperText-root.Mui-error {
+          color: #d32f2f;
+          position: relative;
+          margin: 0;
+          height: 0;
+          padding-bottom: 10px;
+          display: block;
+        }
+
+        .css-1d1r5q-MuiFormHelperText-root {
+          display: none;
+        }
+
+        .MuiFormControl-root {
+          max-width: 48%;
+          margin: 1%;
+        }
+      }
+
+      > label {
+        width: 5%;
+      }
+
+      > input {
+        position: relative;
+        left: 5vw;
+      }
+
+      > * {
+        margin: 0.5rem;
+      }
+
+      .avatar-block {
+        min-width: 400px;
+        width: 70%;
+        height: 50%;
+
+        .image-avatar {
+          width: 20%;
+          border: solid 1px;
+          border-radius: 50%;
+          box-shadow: 0 0 5px gray;
+          margin: 0.5rem;
+          display: inline-block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .border-chose {
+          border: solid 4px green;
+        }
+      }
+
+      .create-button {
+        position: relative;
+        margin: 2rem;
+        height: 3rem;
+        width: 40%;
+        font-size: 1rem;
+      }
+    }
+  }
+}

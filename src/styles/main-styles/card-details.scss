@@ -1,0 +1,31 @@
+.container-block {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .noheight {
+    max-width: 1500px;
+    min-height: 100px;
+    width: 35%;
+    height: auto;
+    margin: 0 0 0 2vw;
+  }
+
+  > .card {
+    margin: 0 3rem;
+  }
+
+  .list-container-block {
+    height: 80%;
+    max-width: 500px;
+    width: 50%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+  }
+}

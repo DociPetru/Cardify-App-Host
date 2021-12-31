@@ -1,0 +1,62 @@
+:root {
+  --border-main: linear-gradient(to right, #bdbdbd, #1976d2) 1 1;
+}
+
+.main {
+  position: relative;
+  max-height: 1300px;
+
+  max-width: 1400px;
+  width: 80%;
+  height: 70vh;
+
+  border: solid 5px;
+  border-image: var(--border-main);
+  margin: 3vh auto;
+
+  .page-back-button {
+    position: absolute;
+    margin: 0%;
+    left: -8%;
+    display: flex;
+    text-align: center;
+
+    > * {
+      background-color: var(--primary-color);
+      border: solid 1px gray;
+      border-radius: 20%;
+      padding: 0.5rem;
+      font-size: 3rem;
+      font-weight: 500;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+
+    > *:hover {
+      font-size: 2.7rem;
+    }
+  }
+}
+
+.section-actions-main {
+  display: flex;
+  justify-content: flex-start;
+
+  .button-transfer {
+    width: 150px !important;
+    height: 70px;
+    margin: 4rem 0 0rem 6vw;
+  }
+}
+
+.section-transfer-bettwen-cards,
+.section-subscriptions {
+  width: 15vw;
+  border: solid 1px;
+  height: 10vh;
+  margin: 3rem 9vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

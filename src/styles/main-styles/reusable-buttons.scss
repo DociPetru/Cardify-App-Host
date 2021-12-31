@@ -1,0 +1,23 @@
+:root {
+  --diametre-button: 55px;
+  --color-button: #1976d2;
+  --background-color-button-hover: #1976d2af;
+  --color-button-hover: white;
+}
+
+.reusable-button {
+  width: var(--diametre-button) !important;
+  height: var(--diametre-button) !important;
+
+  color: var(--color-button);
+
+  border-radius: 50%;
+
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+.reusable-button:hover {
+  background-color: var(--background-color-button-hover);
+  color: var(--color-button-hover);
+}

@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap");
+
+:root {
+  --width-card: 27rem;
+  --modals-background-color: white;
+  --color-primary: rgb(21, 55, 128);
+  --primary-font: "Lexend Deca", sans-serif;
+  --primary-font-weight: 800;
+}
+
+.section-cards {
+  display: flex;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.list-card {
+  position: relative;
+  display: flex;
+  width: 80%;
+  margin: calc(40% / 20) calc(40% / 8);
+  align-content: center;
+  align-items: center;
+
+  .slick-slider {
+    width: 100% !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0%;
+    display: none;
+  }
+}
+
+.card-block {
+  position: relative;
+  max-width: 24rem;
+  height: fit-content(100%);
+  margin: 0 4vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.border-to-delete {
+  border: solid 2px rgba(255, 0, 0, 0.782);
+}
+
+.card {
+  position: relative;
+  width: var(--width-card);
+  height: calc(var(--width-card) / 2);
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+
+  .icon-flip-card {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: xx-large;
+    border-radius: 55%;
+    color: rgb(16, 116, 50);
+  }
+  .icon-flip-card:hover {
+    background-color: rgba(128, 128, 128, 0.453);
+  }
+
+  //// not used
+  .rotate-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transform: rotateY(45deg);
+    animation: rotateAnimation 3s linear;
+  }
+
+  @keyframes rotateAnimation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(90deg);
+    }
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .information-front-card {
+      width: 80%;
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-self: flex-end;
+      font-size: larger;
+
+      .layer-name-date-card {
+        width: 100%;
+        height: 20%;
+        display: flex;
+
+        p {
+          min-width: 48%;
+          height: 20%;
+          margin: 0;
+          padding: 1vh;
+          text-transform: uppercase;
+          font-style: var(--primary-font);
+          font-weight: var(--primary-font-weight);
+          color: rgb(255, 255, 255);
+          text-shadow: 1px 1px #000000;
+        }
+      }
+
+      .layer-number-card {
+        width: 100%;
+        padding: 1vh;
+        margin: 0;
+        font-style: var(--primary-font);
+        font-weight: var(--primary-font-weight);
+        color: rgb(255, 255, 255);
+        letter-spacing: 1.5px;
+        text-shadow: 1px 1px #000000;
+      }
+
+      .layer-cvv-card {
+        width: 100%;
+        padding: 1vh;
+        margin-bottom: 20%;
+        margin-left: -20%;
+        text-align: right;
+        font-style: var(--primary-font);
+        font-weight: var(--primary-font-weight);
+        color: rgb(0, 0, 0);
+        font-style: italic;
+        text-shadow: 0px 1px #ffffff;
+      }
+    }
+
+    .image-bank {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      padding: 0.5rem;
+      z-index: -1;
+    }
+
+    .bank-section {
+      width: 100%;
+      display: flex;
+
+      > div {
+        position: absolute;
+        bottom: 47%;
+        left: 40%;
+      }
+    }
+  }
+}
+
+//////////////////////////// ADD CARD ////////////////////////////@at-root
+
+.Modal-add-card {
+  max-width: 700px;
+  min-width: 500px;
+  max-height: 800px;
+  min-height: 550px;
+  width: 50vw;
+
+  background-color: var(--modals-background-color);
+
+  border-radius: 10px;
+  text-align: right;
+  display: flex;
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .close-modal {
+    font-size: x-large;
+    color: gray;
+    padding: 0%;
+  }
+
+  h1 {
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  .information-create-card {
+    position: relative;
+    top: 0%;
+    min-height: 500px;
+    margin: 0rem 2rem;
+    width: calc(100% - 4rem);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .block-input {
+      width: 80%;
+      display: flex;
+      padding: 0 20%;
+    }
+
+    .css-1wc848c-MuiFormHelperText-root.Mui-error {
+      color: #d32f2f;
+      position: relative;
+      margin: 0;
+      height: 0;
+      padding-bottom: 10px;
+      display: block;
+    }
+
+    .css-1wc848c-MuiFormHelperText-root {
+      display: none;
+    }
+
+    .block-bank-select {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    > div {
+      margin: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .button-group-bank {
+        position: relative;
+        margin: auto;
+
+        .button-bank {
+          margin: 0.5rem;
+          padding: 0.2rem;
+          color: rgb(116, 153, 186) !important;
+        }
+      }
+
+      // The date container
+      .css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+        padding: 0.7rem;
+      }
+
+      .calendar-block {
+        position: relative;
+        width: 30%;
+        padding: 0%;
+        margin: auto;
+
+        > input {
+          position: relative;
+          width: 10%;
+        }
+      }
+    }
+    .create-button {
+      position: relative;
+      margin: 1rem;
+      width: 10rem;
+    }
+  }
+}
+
+/////////////////////////// REMOVE CARD /////////////////////////
+
+.Modal-remove-card {
+  position: relative;
+  max-width: 70vw;
+  height: 30vh;
+  margin: calc(70vh / 2) auto;
+  background-color: rgb(221, 221, 221);
+  border-left: outset 5px var(--primary-color);
+
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .close-button {
+    font-size: 40;
+    color: rgb(77, 77, 77);
+    cursor: pointer;
+  }
+
+  .close-button:hover {
+    color: rgba(128, 128, 128, 0.871);
+  }
+
+  .section-remove-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
+
+    > h1 {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    > div > button {
+      margin: 0.4rem;
+      width: 5rem;
+      height: 3rem;
+    }
+  }
+}

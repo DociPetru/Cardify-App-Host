@@ -9,6 +9,11 @@ import AppRouter from "./components/routes/AppRouter.js";
 
 import "./styles/styles.scss";
 
+const app = express();
+const cors = require("cors");
+
+app.use(cors());
+
 const App = () => <AppRouter />;
 
 ReactDOM.render(<App />, document.getElementById("root"));
